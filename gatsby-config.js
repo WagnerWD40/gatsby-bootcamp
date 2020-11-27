@@ -10,5 +10,15 @@ module.exports = {
     title: 'Full-Stack Bootcamp!',
     author: 'Wagner Lemos',
   },
-  plugins: [`gatsby-plugin-sass`],
+  plugins: [
+    'gatsby-plugin-sass',
+    'gatsby-transformer-remark',
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'posts',
+        path: `${__dirname}/src/posts/`,
+      },
+    },
+  ],
 }
